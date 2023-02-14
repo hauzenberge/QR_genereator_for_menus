@@ -57,10 +57,10 @@
                                 <input name="price" placeholder="{{$menuItem->price}}" value="{{$menuItem->price}}" />
                             </td>
                         </tr>
-                        <button type="submit" id="update-task-{{ $menu->id }}" class="btn btn-info">
+                        <button type="submit" id="update-task-{{ $menuItem->id }}" class="btn btn-info">
                             Зберегти
                         </button>
-                        <a href="{{ url('menuItem/delete/' . $menu->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                        <a href="{{ url('menuItem/delete/' . $menuItem->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                     </form>
                     </p>
                     @endforeach
