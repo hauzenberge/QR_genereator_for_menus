@@ -26,7 +26,7 @@ class MenuType extends Model
 
     protected function getQRUrlAttribute()
     {
-        QrCode::encoding('UTF-8')->size(300)->generate($this->name, public_path() . '/qrcodes/' . $this->name . '.svg');
+        QrCode::encoding('UTF-8')->size(300)->generate(MenuItem::getMenuString($this->id), public_path() . '/qrcodes/' . $this->name . '.svg');
 
         return asset('qrcodes/' . $this->name . '.svg');
     }
