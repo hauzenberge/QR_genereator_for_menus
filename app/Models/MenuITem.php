@@ -27,8 +27,7 @@ class MenuITem extends Model
         $menu = MenuITem::where('menu_type_id', $menu_type_id)
                         ->get()
                         ->map(function($item){
-                           // dd($item);
-                            return $item->name . ' ' . $item->price;
+                            return  "-" . $item->name . ":  " . $item->price;
                         });
         return $menu->implode("\n");
     }
